@@ -1,3 +1,8 @@
 .vscode/
 node_modules/
 .DS_Store
+
+
+# ignore data/ except one file
+data/
+!data/wordCount_20_wordSize_5.json
