@@ -1,3 +1,5 @@
+import subarg from 'subarg'
+
 const DECIMALS = 3
 
 export function printMemoryUsed(functionName) {
@@ -9,4 +11,21 @@ export function printTime(functionName, start, end) {
   console.log(
     `${functionName} took: ${(end - start).toFixed(DECIMALS)} milliseconds.`
   )
+}
+
+export async function loadArrayFromJSON(fileName) {
+  const filePath = `../data/${fileName}.json`
+  let inputArray = await import(filePath, {
+    assert: { type: 'json' }
+  })
+  if (!inputArray) throw new Error('Failed to import array from JSON file!')
+  return inputArray.default
+}
+
+export function parsingArguments(parseFunction = true, parseFile = true) {
+  let argv = subarg(process.argv.slice(2))
+  if (parseFunction && !argv.function)
+    throw new Error('Must specify function name!')
+  if (parseFile && !argv.file) throw new Error('Must specify array file name!')
+  return { fileName: argv.file, functionName: argv.function }
 }

@@ -1,6 +1,8 @@
-import { printMemoryUsed } from '../utils.mjs'
-
-import inputArray from '../../data/wordCount_1000000_wordSize_500.json' assert { type: 'json' }
+import {
+  printMemoryUsed,
+  parsingArguments,
+  loadArrayFromJSON
+} from '../utils.mjs'
 
 function convertArrayToMap(inputArray) {
   let myMap = new Map()
@@ -10,9 +12,12 @@ function convertArrayToMap(inputArray) {
   return myMap
 }
 
-function run() {
-  const myMap = convertArrayToMap(inputArray)
+async function run() {
+  const { fileName } = parsingArguments(false)
+  const inputArray = await loadArrayFromJSON(fileName)
   const elementToFindFor = inputArray[inputArray.length / 2]
+  const myMap = convertArrayToMap(inputArray)
+
   const result = myMap.has(elementToFindFor)
   if (!result) throw Error('Should have found it!')
   printMemoryUsed('Map')

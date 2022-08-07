@@ -1,10 +1,9 @@
-import inputArray from '../../data/wordCount_1000000_wordSize_500.json' assert { type: 'json' }
+import { parsingArguments, loadArrayFromJSON } from '../utils.mjs'
 
 const DECIMALS = 3
 const REPETITIONS = 10
 
-function testFunction(myMap) {
-  const elementToFindFor = inputArray[inputArray.length / 2]
+function testFunction(myMap, elementToFindFor) {
   let start = performance.now()
   const result = myMap.has(elementToFindFor)
   let end = performance.now()
@@ -20,12 +19,15 @@ function convertArrayToMap(inputArray) {
   return myMap
 }
 
-function run() {
+async function run() {
+  const { fileName } = parsingArguments(false)
+  const inputArray = await loadArrayFromJSON(fileName)
+  const elementToFindFor = inputArray[inputArray.length / 2]
   const myMap = convertArrayToMap(inputArray)
 
   const times = []
   for (let i = 0; i < REPETITIONS; i++) {
-    times.push(testFunction(myMap))
+    times.push(testFunction(myMap, elementToFindFor))
   }
   const averageTime = times.reduce((a, b) => a + b, 0) / times.length
 

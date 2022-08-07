@@ -1,6 +1,5 @@
-import subarg from 'subarg'
+import { loadArrayFromJSON, parsingArguments } from '../utils.mjs'
 import * as functions from '../functions.mjs'
-import inputArray from '../../data/wordCount_2000000_wordSize_20.json' assert { type: 'json' }
 
 const DECIMALS = 3
 const REPETITIONS = 10
@@ -14,10 +13,9 @@ function testFunction(functionName, inputArray) {
   return end - start
 }
 
-function run() {
-  let argv = subarg(process.argv.slice(2))
-  if (!argv.function) throw new Error('Must specify function name!')
-  const functionName = argv.function
+async function run() {
+  const { fileName, functionName } = parsingArguments()
+  const inputArray = await loadArrayFromJSON(fileName)
 
   const times = []
   for (let i = 0; i < REPETITIONS; i++) {
