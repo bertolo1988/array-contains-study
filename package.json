@@ -1,0 +1,32 @@
+{
+  "name": "array-contains",
+  "version": "1.0.0",
+  "engine": {
+    "node": ">=18.7.0"
+  },
+  "description": "A study of the fastest method to see if an input exists in an array.",
+  "main": "./src/bin/measure-time.mjs",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "prettier:format": "npx prettier --write .",
+    "prettier:check": "npx prettier --check .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fastest",
+    "javascript",
+    "contains",
+    "study",
+    "indexOf",
+    "find"
+  ],
+  "author": "bertolo1988 <tiagobertolo@gmail.com> (https://github.com/bertolo1988)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "subarg": "^1.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
