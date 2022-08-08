@@ -1,4 +1,6 @@
-## Generate a big array
+## Generate an array
+
+This command will output a file to `data/wordCount_1000000_wordSize_500.json`
 
 ```
 node src/bin/generate-arrays.mjs --count 1000000 --wordSize 500
