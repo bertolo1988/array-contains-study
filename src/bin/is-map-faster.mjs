@@ -1,7 +1,11 @@
-import { parsingArguments, loadArrayFromJSON } from '../utils.mjs'
+import {
+  parsingArguments,
+  loadArrayFromJSON,
+  calculateAverageOfTimes
+} from '../utils.mjs'
 
 const DECIMALS = 3
-const REPETITIONS = 10
+const REPETITIONS = 25
 
 function testFunction(myMap, elementToFindFor) {
   let start = performance.now()
@@ -29,7 +33,7 @@ async function run() {
   for (let i = 0; i < REPETITIONS; i++) {
     times.push(testFunction(myMap, elementToFindFor))
   }
-  const averageTime = times.reduce((a, b) => a + b, 0) / times.length
+  const averageTime = calculateAverageOfTimes(times)
 
   console.log(
     `Map took on average ${averageTime.toFixed(
