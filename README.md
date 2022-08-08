@@ -16,7 +16,7 @@ The objective of this study is to measure the impact of implementation details o
 
 - this arrays will be stored with the following name notation: `data/wordCount_${wordCount}_wordSize_${wordSize}.json`
 
-- generate the array file `wordCount_1000000_wordSize_500.json` with the command `node src/bin/generate-arrays.mjs --count 1000000 --wordSize 500`. This file is hardcoded in some script files until newer versions of node.js support a proper method to dinammically load JSON files inside ES modules.
+- generate the array file `wordCount_1000000_wordSize_500.json` with the command `node src/bin/generate-arrays.mjs --count 1000000 --wordSize 500`
 
 ## Results
 
