@@ -1,8 +1,12 @@
-import { loadArrayFromJSON, parsingArguments } from '../utils.mjs'
+import {
+  loadArrayFromJSON,
+  parsingArguments,
+  calculateAverageOfTimes
+} from '../utils.mjs'
 import * as functions from '../functions.mjs'
 
 const DECIMALS = 3
-const REPETITIONS = 10
+const REPETITIONS = 25
 
 function testFunction(functionName, inputArray) {
   const elementToFindFor = inputArray[inputArray.length / 2]
@@ -21,7 +25,8 @@ async function run() {
   for (let i = 0; i < REPETITIONS; i++) {
     times.push(testFunction(functionName, inputArray))
   }
-  const averageTime = times.reduce((a, b) => a + b, 0) / times.length
+
+  const averageTime = calculateAverageOfTimes(times)
 
   console.log(
     `${functionName} took on average ${averageTime.toFixed(
