@@ -29,3 +29,12 @@ export function parsingArguments(parseFunction = true, parseFile = true) {
   if (parseFile && !argv.file) throw new Error('Must specify array file name!')
   return { fileName: argv.file, functionName: argv.function }
 }
+
+export function calculateAverageOfTimes(times) {
+  const sortedTimes = times.sort((a, b) => a - b)
+  sortedTimes.shift()
+  sortedTimes.shift()
+  sortedTimes.pop()
+  sortedTimes.pop()
+  return sortedTimes.reduce((a, b) => a + b, 0) / sortedTimes.length
+}
