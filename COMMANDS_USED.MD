@@ -15,6 +15,7 @@ node src/bin/generate-arrays.mjs --count 2000000 --wordSize 20
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayForOf
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayFor
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayForIgnoreDataType
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayDoWhile
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function includes
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function indexOf
@@ -28,17 +29,18 @@ node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_50
 ### Output
 
 ```
-existsInArrayForOf took on average 11.154 milliseconds. (25x runs)
-existsInArrayFor took on average 10.275 milliseconds. (25x runs)
-existsInArrayWhile took on average 10.061 milliseconds. (25x runs)
-existsInArrayDoWhile took on average 11.703 milliseconds. (25x runs)
-includes took on average 8.684 milliseconds. (25x runs)
-indexOf took on average 8.944 milliseconds. (25x runs)
-findIndex took on average 18.719 milliseconds. (25x runs)
-some took on average 18.995 milliseconds. (25x runs)
-find took on average 19.675 milliseconds. (25x runs)
-lodashIndexOf took on average 10.905 milliseconds. (25x runs)
-lodashIncludes took on average 11.645 milliseconds. (25x runs)
+existsInArrayForOf took on average 10.257 milliseconds. (25x runs)
+existsInArrayFor took on average 9.984 milliseconds. (25x runs)
+existsInArrayWhile took on average 9.628 milliseconds. (25x runs)
+existsInArrayForIgnoreDataType took on average 9.891 milliseconds. (25x runs)
+existsInArrayDoWhile took on average 9.951 milliseconds. (25x runs)
+includes took on average 7.705 milliseconds. (25x runs)
+indexOf took on average 7.960 milliseconds. (25x runs)
+findIndex took on average 18.035 milliseconds. (25x runs)
+some took on average 17.273 milliseconds. (25x runs)
+find took on average 20.083 milliseconds. (25x runs)
+lodashIndexOf took on average 10.869 milliseconds. (25x runs)
+lodashIncludes took on average 9.878 milliseconds. (25x runs)
 ```
 
 ### Commands
@@ -47,6 +49,7 @@ lodashIncludes took on average 11.645 milliseconds. (25x runs)
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayForOf
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayFor
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayForIgnoreDataType
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayDoWhile
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function includes
 node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function indexOf
@@ -60,17 +63,18 @@ node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20
 ### Output
 
 ```
-existsInArrayForOf took on average 13.649 milliseconds. (25x runs)
-existsInArrayFor took on average 9.550 milliseconds. (25x runs)
-existsInArrayWhile took on average 9.429 milliseconds. (25x runs)
-existsInArrayDoWhile took on average 9.341 milliseconds. (25x runs)
-includes took on average 12.465 milliseconds. (25x runs)
-indexOf took on average 9.371 milliseconds. (25x runs)
-findIndex took on average 18.482 milliseconds. (25x runs)
-some took on average 18.305 milliseconds. (25x runs)
-find took on average 23.121 milliseconds. (25x runs)
-lodashIndexOf took on average 11.971 milliseconds. (25x runs)
-lodashIncludes took on average 11.881 milliseconds. (25x runs)
+existsInArrayForOf took on average 12.503 milliseconds. (25x runs)
+existsInArrayFor took on average 8.843 milliseconds. (25x runs)
+existsInArrayWhile took on average 8.649 milliseconds. (25x runs)
+existsInArrayForIgnoreDataType took on average 8.694 milliseconds. (25x runs)
+existsInArrayDoWhile took on average 8.671 milliseconds. (25x runs)
+includes took on average 9.805 milliseconds. (25x runs)
+indexOf took on average 8.735 milliseconds. (25x runs)
+findIndex took on average 16.688 milliseconds. (25x runs)
+some took on average 16.878 milliseconds. (25x runs)
+find took on average 21.647 milliseconds. (25x runs)
+lodashIndexOf took on average 10.488 milliseconds. (25x runs)
+lodashIncludes took on average 10.541 milliseconds. (25x runs)
 ```
 
 ## Test space complexity

@@ -14,6 +14,13 @@ export function existsInArrayFor(arr, targetElem) {
   return false
 }
 
+export function existsInArrayForIgnoreDataType(arr, targetElem) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == targetElem) return true
+  }
+  return false
+}
+
 export function existsInArrayWhile(arr, targetElem) {
   let i = 0
   while (i < arr.length) {
