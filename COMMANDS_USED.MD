@@ -114,6 +114,7 @@ indexOf took on average 6.708 milliseconds. (25x runs)
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayForOf
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayFor
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayWhile
+node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayForIgnoreDataType
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function existsInArrayDoWhile
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function includes
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function indexOf
@@ -127,17 +128,52 @@ node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_5
 ### Output
 
 ```
-existsInArrayForOf used memory: 516.094 MB
-existsInArrayFor used memory: 508.497 MB
-existsInArrayWhile used memory: 508.497 MB
-existsInArrayDoWhile used memory: 508.497 MB
+existsInArrayForOf used memory: 521.626 MB
+existsInArrayFor used memory: 508.498 MB
+existsInArrayWhile used memory: 508.498 MB
+existsInArrayForIgnoreDataType used memory: 508.561 MB
+existsInArrayDoWhile used memory: 508.496 MB
 includes used memory: 508.483 MB
-indexOf used memory: 508.483 MB
-findIndex used memory: 508.496 MB
-some used memory: 508.496 MB
-find used memory: 508.496 MB
-lodashIndexOf used memory: 508.496 MB
-lodashIncludes used memory: 508.561 MB
+indexOf used memory: 508.484 MB
+findIndex used memory: 508.498 MB
+some used memory: 508.499 MB
+find used memory: 508.497 MB
+lodashIndexOf used memory: 508.498 MB
+lodashIncludes used memory: 508.498 MB
+```
+
+### Commands
+
+```
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayForOf
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayFor
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayWhile
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayForIgnoreDataType
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayDoWhile
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function includes
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function indexOf
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function findIndex
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function some
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function find
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function lodashIndexOf
+node --no-warnings src/bin/measure-space.mjs --file wordCount_2500000_wordSize_9 --function lodashIncludes
+```
+
+### Output
+
+```
+existsInArrayForOf used memory: 120.192 MB
+existsInArrayFor used memory: 119.634 MB
+existsInArrayWhile used memory: 119.634 MB
+existsInArrayForIgnoreDataType used memory: 119.634 MB
+existsInArrayDoWhile used memory: 119.634 MB
+includes used memory: 119.620 MB
+indexOf used memory: 119.620 MB
+findIndex used memory: 119.634 MB
+some used memory: 119.634 MB
+find used memory: 119.634 MB
+lodashIndexOf used memory: 119.634 MB
+lodashIncludes used memory: 119.634 MB
 ```
 
 ## Test Map
