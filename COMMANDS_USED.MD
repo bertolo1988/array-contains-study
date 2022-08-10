@@ -63,18 +63,18 @@ node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20
 ### Output
 
 ```
-existsInArrayForOf took on average 12.503 milliseconds. (25x runs)
-existsInArrayFor took on average 8.843 milliseconds. (25x runs)
-existsInArrayWhile took on average 8.649 milliseconds. (25x runs)
-existsInArrayForIgnoreDataType took on average 8.694 milliseconds. (25x runs)
-existsInArrayDoWhile took on average 8.671 milliseconds. (25x runs)
-includes took on average 9.805 milliseconds. (25x runs)
-indexOf took on average 8.735 milliseconds. (25x runs)
-findIndex took on average 16.688 milliseconds. (25x runs)
-some took on average 16.878 milliseconds. (25x runs)
-find took on average 21.647 milliseconds. (25x runs)
-lodashIndexOf took on average 10.488 milliseconds. (25x runs)
-lodashIncludes took on average 10.541 milliseconds. (25x runs)
+existsInArrayForOf took on average 11.504 milliseconds. (25x runs)
+existsInArrayFor took on average 8.044 milliseconds. (25x runs)
+existsInArrayWhile took on average 7.992 milliseconds. (25x runs)
+existsInArrayForIgnoreDataType took on average 8.056 milliseconds. (25x runs)
+existsInArrayDoWhile took on average 7.959 milliseconds. (25x runs)
+includes took on average 9.232 milliseconds. (25x runs)
+indexOf took on average 8.015 milliseconds. (25x runs)
+findIndex took on average 16.508 milliseconds. (25x runs)
+some took on average 16.211 milliseconds. (25x runs)
+find took on average 21.370 milliseconds. (25x runs)
+lodashIndexOf took on average 10.321 milliseconds. (25x runs)
+lodashIncludes took on average 10.350 milliseconds. (25x runs)
 ```
 
 ## Test space complexity
