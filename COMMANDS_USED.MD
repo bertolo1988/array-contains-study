@@ -74,6 +74,40 @@ lodashIndexOf took on average 10.905 milliseconds. (25x runs)
 lodashIncludes took on average 11.645 milliseconds. (25x runs)
 ```
 
+
+### Commands
+
+```
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayForOf
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayFor
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function existsInArrayDoWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function includes
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function indexOf
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function findIndex
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function some
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function find
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function lodashIndexOf
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2000000_wordSize_20 --function lodashIncludes
+```
+
+### Output
+
+```
+existsInArrayForOf took on average 13.649 milliseconds. (25x runs)
+existsInArrayFor took on average 9.550 milliseconds. (25x runs)
+existsInArrayWhile took on average 9.429 milliseconds. (25x runs)
+existsInArrayDoWhile took on average 9.341 milliseconds. (25x runs)
+includes took on average 12.465 milliseconds. (25x runs)
+indexOf took on average 9.371 milliseconds. (25x runs)
+findIndex took on average 18.482 milliseconds. (25x runs)
+some took on average 18.305 milliseconds. (25x runs)
+find took on average 23.121 milliseconds. (25x runs)
+lodashIndexOf took on average 11.971 milliseconds. (25x runs)
+lodashIncludes took on average 11.881 milliseconds. (25x runs)
+```
+
+
 ## Test Map
 
 ### Commands
