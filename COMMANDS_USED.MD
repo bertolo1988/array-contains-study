@@ -5,7 +5,12 @@ This command will output 2 array files to `data/wordCount_X_wordSize_Y.json`
 ```
 node src/bin/generate-arrays.mjs --count 1000000 --wordSize 500
 node src/bin/generate-arrays.mjs --count 2000000 --wordSize 20
+node src/bin/generate-arrays.mjs --count 2500000 --wordSize 9
 ```
+
+## Format the array 
+
+`npm run prettier:format`
 
 ## Test time complexity
 
@@ -75,6 +80,30 @@ some took on average 16.211 milliseconds. (25x runs)
 find took on average 21.370 milliseconds. (25x runs)
 lodashIndexOf took on average 10.321 milliseconds. (25x runs)
 lodashIncludes took on average 10.350 milliseconds. (25x runs)
+```
+
+### Commands
+
+```
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayForOf
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayFor
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayForIgnoreDataType
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function existsInArrayDoWhile
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function includes
+node --no-warnings src/bin/measure-time.mjs --file wordCount_2500000_wordSize_9 --function indexOf
+```
+
+### Output
+
+```
+existsInArrayForOf took on average 4.560 milliseconds. (25x runs)
+existsInArrayFor took on average 3.945 milliseconds. (25x runs)
+existsInArrayWhile took on average 4.291 milliseconds. (25x runs)
+existsInArrayForIgnoreDataType took on average 3.839 milliseconds. (25x runs)
+existsInArrayDoWhile took on average 4.115 milliseconds. (25x runs)
+includes took on average 6.885 milliseconds. (25x runs)
+indexOf took on average 6.708 milliseconds. (25x runs)
 ```
 
 ## Test space complexity
