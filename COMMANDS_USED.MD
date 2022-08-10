@@ -21,6 +21,7 @@ node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_5
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function some
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function find
 node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function lodashIndexOf
+node --no-warnings src/bin/measure-space.mjs --file wordCount_1000000_wordSize_500 --function lodashIncludes
 ```
 
 ### Output
@@ -36,6 +37,7 @@ findIndex used memory: 508.496 MB
 some used memory: 508.496 MB
 find used memory: 508.496 MB
 lodashIndexOf used memory: 508.496 MB
+lodashIncludes used memory: 508.561 MB
 ```
 
 ## Test time complexity
@@ -53,6 +55,7 @@ node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_50
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function some
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function find
 node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function lodashIndexOf
+node --no-warnings src/bin/measure-time.mjs --file wordCount_1000000_wordSize_500 --function lodashIncludes
 ```
 
 ### Output
@@ -68,6 +71,7 @@ findIndex took on average 18.719 milliseconds. (25x runs)
 some took on average 18.995 milliseconds. (25x runs)
 find took on average 19.675 milliseconds. (25x runs)
 lodashIndexOf took on average 10.905 milliseconds. (25x runs)
+lodashIncludes took on average 11.645 milliseconds. (25x runs)
 ```
 
 ## Test Map

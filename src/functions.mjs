@@ -55,3 +55,7 @@ export function find(arr, elem) {
 export function lodashIndexOf(arr, elem) {
   return _.indexOf(arr, elem) > -1
 }
+
+export function lodashIncludes(arr, elem) {
+  return _.includes(arr, elem)
+}
