@@ -8,7 +8,7 @@ node src/bin/generate-arrays.mjs --count 2000000 --wordSize 20
 node src/bin/generate-arrays.mjs --count 2500000 --wordSize 9
 ```
 
-## Format the array 
+## Format the arrays
 
 `npm run prettier:format`
 
